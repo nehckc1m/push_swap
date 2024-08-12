@@ -28,7 +28,7 @@ int 	is_number(char *str)
 	}
 	return (1);
 }
-
+/*
 char	*ft_strdup(const char *s)
 {
 	int		slen;
@@ -64,7 +64,7 @@ void 	ft_tabcat(char ***dest, char *src, int *index)
 		(*index)++;
 	}
 	(*index)--;
-}
+}*/
 
 void 	find_last_node(t_stack_node *stack)
 {
@@ -74,3 +74,22 @@ void 	find_last_node(t_stack_node *stack)
 		stack = stack->next;
 	return (stack);
 }
+
+int	stack_len(t_stack *stack)
+{
+	int	count;
+	
+	if (!stack)
+		return (0);
+	count = 0;
+	while (stack)
+	{
+		stack = stack->next;
+		count++;
+	}
+	return (count);
+}
+	
+	
+	
+	

@@ -13,26 +13,6 @@
 #include "push_swap.h"
 #include <limits.h>
 
-t_stack_node	*find_highest(t_stack *stack)
-{
-	int 				highest;
-	t_stack_node 	*highest_node;
-
-	if (stack == NULL)
-		return (NULL);
-	highest = INT_MIN;
-	while (stack)
-	{
-		if (stack->value > highest)
-		{
-			highest = stack->value;
-			highest_node = stack;
-		}
-		stack = stack->next;
-	}
-	return (highest_node);
-}
-
 void	tiny_sort(t_stack **stack_a)
 {
 	t_stack_node	*highest;
@@ -44,4 +24,24 @@ void	tiny_sort(t_stack **stack_a)
 		rev_rotate_stack(a, a);
 	if ((*a)->value > (*a)->next->value)
 		swap(a, a);
+}
+
+void	sorting(t_stack **stack_a, t_stack **stack_b)
+{
+	int 	lenght;
+	int 	count;
+	
+	count = 0;
+	lenght = stack_len(*a);
+	while (len_a-- > 3 && !is_sorted(*a) && count++ != 2)
+		push(b, a, b);
+	while (len_a-- > 3 && is_sorted(*a))
+	{
+		prep_nodes_a(*a, *b);
+		push_all_to_b(a, b);
+	}
+	tiny_sort(a);
+	while (*b)
+
+
 }

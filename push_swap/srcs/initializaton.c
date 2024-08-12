@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	**init_tab(int ac, char **av, int *c)
+/*int	**init_tab(int ac, char **av, int *c)
 {
 	int 		i;
 	int 		j;
@@ -35,7 +35,7 @@ int	**init_tab(int ac, char **av, int *c)
 	res[i] = 0;
 	return (res);
 }
-
+*/
 void	append_node(t_stack **a, int n)
 {
 	t_stack *node;

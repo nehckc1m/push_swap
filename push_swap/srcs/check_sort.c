@@ -18,8 +18,7 @@ int	is_sorted(t_stack **stack_a)
 	{
 		if (stack->value > stack->next->value)
 			return (0);
-		else
-			stack = stack->next;
+		stack = stack->next;
 	}
 	return (1);
 }

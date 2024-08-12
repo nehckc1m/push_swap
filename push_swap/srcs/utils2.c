@@ -12,33 +12,22 @@
 
 #include "push_swap.h"
 
-void	delfirst(t_stack **a)
+t_stack_node	*find_highest(t_stack *stack)
 {
-	if (*a && (*a)->next->value != (*a)->value)
-	{
-		(*a)->next->previous = (*a)->previous;
-		(*a)->previous->next = (*a)->next;
-		(*a) = (*a)->next;
-	}
-}
+	int 				highest;
+	t_stack_node 	*highest_node;
 
-void 	addfirst(t_stack **a, t_stack *new_node)
-{
-
-	if (new_node)
+	if (stack == NULL)
+		return (NULL);
+	highest = INT_MIN;
+	while (stack)
 	{
-		if (*a)
+		if (stack->value > highest)
 		{
-			new_node->next = (*a);
-			new_node->previous = (*a)->previous;
-			(*a)->previous->next = new_node;
-			(*a)->previous = new_node;
+			highest = stack->value;
+			highest_node = stack;
 		}
-		else
-		{
-			new_node->next = new_node;
-			new_node->previous = new_node;
-		}
-		(*a) = new_node;
+		stack = stack->next;
 	}
+	return (highest_node);
 }

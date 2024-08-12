@@ -14,18 +14,28 @@
 
 int main (int ac, char **av)
 {
-	char **tab;
-	t_stack *stack_b
+	t_stack *stack_a;
+	t_stack *stack_b;
 	
+	stack_a = NULL;
 	stack_b = NULL;
-	if (ac != 1 || (ac != 2 && ac[1][0]))
+	if (ac == 1 || (ac == 2 && !av[1][0]))
+		return (1);
+	else if (ac == 2 && is_number()
+		av = split(av[1]);
+	if (is_number(av) == 0)
+		return (1);
+	else
+		init_stack(&stack_a, av + 1);
+	if (!is_sorted(stack_a))
 	{
-		len = 0;
-		tab = init_tab(--ac, ++av, &len);
-
+		if (stack_len(stack_a) == 2)
+			rotate_stack(&a,a);
+		if (stack_len(stack_a) == 3)
+			tiny_sort(&stack_a);
+		if (stack_len(stack_a) > 3)
+			sort(&stack_a, &stack_b);
 	}
-	else if (ac == 2)
-	{
-		av = split(av[1]); 
-	}
+	ft_free(&stack_a);
+	return (0);
 }

@@ -30,7 +30,7 @@ void	swap(t_stack **a, char n)
 	}
 }
 
-void 	swap_s(t_stack **a, t_stack **b, char n)
+void 	swap_stacks(t_stack **a, t_stack **b, char n)
 {
 	swap(a, 0);
 	swap(b, 0);

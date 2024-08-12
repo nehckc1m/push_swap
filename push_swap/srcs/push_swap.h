@@ -35,4 +35,28 @@ void 	rotate_stack(t_stack **a, char n);
 void 	rev_rotate_stack(t_stack **a, char n);
 void 	rr(t_stack **a, t_stack **b, int n);
 void 	rrr(t_stack **a, t_stack **b, int n);
+
+//init
+void	append_node(t_stack **a, int n);
+void	init_stack(t_stack **a, char **av);
+int check_double(int *array, int len);
+
+//split
+int	ft_strlen(const char *s);
+int	count_words(char const *s);
+char	**ft_split(char const *s);
+//atoi 
+long int	ft_atoi(const char *str);
+//sort
+void	tiny_sort(t_stack **stack_a);
+//utils
+int 	is_number(char *str);
+void 	find_last_node(t_stack_node *stack);
+int	stack_len(t_stack *stack);
+//utils2
+t_stack_node	*find_highest(t_stack *stack);
+//check_sort
+int	is_sorted(t_stack **stack_a);
+
+
 #endif

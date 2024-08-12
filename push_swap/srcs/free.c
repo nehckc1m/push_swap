@@ -27,6 +27,9 @@ void	free_stack(t_stack **stack)
 	*stack = NULL;
 }
 
-void 	exit_err(t_stack **stack a, t_stack **stack b)
+void 	free_error(t_stack **stack)
 {
-	if (!stack_a
+	free_stack(stack);
+	write(1,"Error\n",6);
+	exit(1);
+}
